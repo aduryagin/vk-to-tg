@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: db
+  node:
+    image: bot:latest
+    environment:
+      DB_HOST: postgres
+      BOT_TOKEN: BOT_TOKEN
+      TELEGRAM_CHANNEL: TELEGRAM_CHANNEL
+      VK_ACCESS_TOKEN: VK_ACCESS_TOKEN
+      VK_APP_ID: VK_APP_ID
+      VK_APP_SECRET: VK_APP_SECRET
+    depends_on:
+      - postgres
+    restart: on-failure
+    command: ["./wait-for.sh", "postgres:5432", "--", "npm", "start"]

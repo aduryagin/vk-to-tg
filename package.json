@@ -1,0 +1,26 @@
+{
+  "name": "vk-to-tg",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "pm2-runtime start pm2.config.js",
+    "start:dev": "nodemon --experimental-modules entry.mjs",
+    "lint": "eslint ./*.mjs ./**/*.mjs"
+  },
+  "dependencies": {
+    "moment-timezone": "^0.5.21",
+    "node-pg-migrate": "^3.3.0",
+    "node-vkapi": "^3.0.7",
+    "nodemon": "^1.17.5",
+    "pg": "^7.4.3",
+    "telegraf": "^3.21.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.12.1"
+  }
+}
