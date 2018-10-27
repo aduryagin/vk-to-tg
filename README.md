@@ -16,6 +16,9 @@ Grub vk publics posts and publish them in your telegram channel with moderation 
 4) Remove VK public
 5) When publishing a new post, the post is added to the queue. Posts are published with a frequency of 2 to 3 hours.
 
+## Example
+[https://t.me/slaboum1e](https://t.me/slaboum1e)
+
 ## Screenshots
 
 <img src="images/bot.jpg" width="300">
